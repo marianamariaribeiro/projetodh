@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O titulo ficara dinamico dependendo da Categoria selecionada -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categorias.css">
+    <title>Produtos</title>
+</head>
+
+<body>
+    <div class="header">
+
+        <input type="text" id="barra-procurar" name="barra-procurar" placeholder="O QUE PROCURA?">
+
+        <a href="#carrinho"><img id="carrinho" src="./img/carrinho.png"></a>
+        <a href="#procurar"><img id="botao-procurar" src="./img/procurar.png"></a>
+        <a href="#home"><img id="logo" src="./img/logo.png"></a>
+        <a href="#menu"><img id="menu" src="./img/menu.png"></a>
+    </div>
+    <main>
+        <div class="Sidebar">
+            <a href="javascript:void(0)" class="closebtn" id="closeside" onclick="closeNav()">&times;</a>
+            <h4>Navegar por Categoria:</h4>
+            </br>
+            <button class="Sidebar_button">Camisetas</button>
+            <button class="Sidebar_button">Adesivos</button>
+            <button class="Sidebar_button">Chaveiros</button>
+            <button class="Sidebar_button">Canecas</button>
+            </br>
+            <h4>Filtros</h4>
+            <h5>Tamanho</h5>
+            <div class="Sidebar_filtros">
+                <a class="Sidebar_filtros_tam" href="#">PP</a>
+                <a class="Sidebar_filtros_tam" href="#">P</a>
+                <a class="Sidebar_filtros_tam" href="#">M</a>
+                <a class="Sidebar_filtros_tam" href="#">G</a>
+                <a class="Sidebar_filtros_tam" href="#">XG</a>
+            </div>
+            </br>
+            <h5>Cores</h5>
+            <div class="Sidebar_color">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="Azul" value="Azul">
+                        <div class="Sidebar_color_square" style="background-color:rgb(17, 41, 80)"></div>
+                        Azul
+                    </li>
+                    <li>
+                        <input type="checkbox" name="Amarelo" value="Amarelo">
+                        <div class="Sidebar_color_square" style="background-color:rgb(199, 187, 23)"></div>
+                        Amarelo
+                    </li>
+                    <li>
+                        <input type="checkbox" name="Vermelho" value="Vermelho">
+                        <div class="Sidebar_color_square" style="background-color:rgb(173, 56, 20)"></div>
+                        Vermelho
+                    </li>
+                    <li>
+                        <input type="checkbox" name="Roxo" value="Roxo">
+                        <div class="Sidebar_color_square" style="background-color:rebeccapurple"></div>
+                        Roxo
+                    </li>
+                </ul>
+            </div>
+            </br>
+            <div class="Sidebar_preco">
+                <h5>Preço</h5>
+                <div class="Sidebar_preco_labels">
+                    <div>R$0,00</div>
+                    <div>R$1000,00</div>
+                </div>
+                <input type="range" min="1" max="1000" value="100" class="Sidebar_preco_slider" id="myRange">
+                <div class="Sidebar_preco_labels">R$0,00 - R$100,00</div>
+            </div>
+            </br>
+            <h5>Descontos</h5>
+            <div class="Sidebar_descontos">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="10" value="10">
+                        <label for="10"> até 10%</label><br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="30" value="20">
+                        <label for="30"> de 10 a 30%</label><br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="60" value="60">
+                        <label for="60"> de 30 a 60%</label><br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="80" value="80">
+                        <label for="80"> de 60 a 80%</label><br>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="100" value="100">
+                        <label for="100"> mais de 80%</label><br>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="Produtos">
+            <div class="Produtos_header">
+                <h1 class="Produtos_header_titulo">Todos os Produtos</h1>
+                <div class="Produtos_header_ordem">
+                    <span>Ordenar por:</span>
+                    <select name="select">
+                        <option value="alfabetica">Ordem alfabética</option> 
+                        <option value="vendidos" selected>Mais vendidos</option>
+                        <option value="maior">Maior preço</option>
+                        <option value="menor">Menor preço</option>
+                    </select>
+                    <button id="Sidebar_open" class="Sidebar_open">Filtrar</button>
+                </div>
+            </div>
+            <div class="Produtos_galeria">
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/caneca1.jpg" alt="caneca_1">
+                    <div class="Produtos_produto_name">Caneca 1</div>
+                    <div class="Produtos_produto_name">R$30,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/caneca2.jpg" alt="caneca_1">
+                    <div class="Produtos_produto_name">Caneca 2</div>
+                    <div class="Produtos_produto_name">R$30,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/caneca3.jpg" alt="caneca_1">
+                    <div class="Produtos_produto_name">Caneca 3</div>
+                    <div class="Produtos_produto_name">R$30,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/caneca4.jpg" alt="caneca_1">
+                    <div class="Produtos_produto_name">Caneca 4</div>
+                    <div class="Produtos_produto_name">R$30,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/caneca5.jpg" alt="caneca_1">
+                    <div class="Produtos_produto_name">Caneca 5</div>
+                    <div class="Produtos_produto_name">R$30,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/adesivoo1.png" alt="caneca_1">
+                    <div class="Produtos_produto_name">Adesivo 1</div>
+                    <div class="Produtos_produto_name">R$5,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/adesivoo2.png" alt="caneca_1">
+                    <div class="Produtos_produto_name">Adesivo 2</div>
+                    <div class="Produtos_produto_name">R$5,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+                <article class="Produtos_produto">
+                    <img class="Produtos_produto_img" src="img/produtos/camiseta.jpg" alt="caneca_1">
+                    <div class="Produtos_produto_name">Camiseta</div>
+                    <div class="Produtos_produto_name">R$35,00</div>
+                    <button class="Produtos_produto_button">Adicionar ao carrinho</button>
+                    <button class="Produtos_produto_button">Ver mais</button>
+                </article>
+
+            </div>
+            <div class="Produtos_pagination">
+                <a class="Produtos_pagination_point" href="#">❮</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a class="Produtos_pagination_pointend" href="#">❯</a>
+            </div>
+    </main>
+
+    <div class="footer">
+
+        <div id="titulo-site-footer">
+            <span>devHouse</span>
+        </div>
+
+        <div id="endereco-site-footer">
+            <span>DigitalHouse<br/>Rua Digital, Looping sem fim.</span>
+        </div>
+
+
+        <div id="copy-site-footer">
+            <span>Copyright © 2020 devHouse. Todos os direitos reservados.</span>
+        </div>
+
+    </div>
+</body>
+<script>
+    document.getElementById("Sidebar_open").addEventListener("click", function() {
+        document.getElementsByClassName("Sidebar")[0].style.display = ""
+        document.getElementsByClassName("Produtos")[0].style.display = "none"
+
+    })
+
+    document.getElementById("closeside").addEventListener("click", function() {
+        document.getElementsByClassName("Produtos")[0].style.display = ""
+        document.getElementsByClassName("Sidebar")[0].style.display = "none"
+    });
+
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        /* The viewport is less than, or equal to, 700 pixels wide */
+        document.getElementsByClassName("Sidebar")[0].style.display = "none"
+
+    } else {
+        /* The viewport is greater than 700 pixels wide */
+        document.getElementsByClassName("Sidebar")[0].style.display = ""
+    }
+</script>
+
+</html>
